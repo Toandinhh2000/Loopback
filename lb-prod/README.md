@@ -9,3 +9,7 @@
 # LESSON 4 - Generic Function
 
 # LESSON 5 - Generic Function T Array Type
+
+# LESSON 6 - Generic Function with Multiple Type Variables
+
+# LESSON 7 - Generic Constraints
