@@ -13,3 +13,5 @@
 # LESSON 6 - Generic Function with Multiple Type Variables
 
 # LESSON 7 - Generic Constraints
+
+# LESSON 8 - Generic Interfaces to describe Object Properties
