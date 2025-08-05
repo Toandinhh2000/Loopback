@@ -10,4 +10,4 @@ function displayType<T>(id: T, name: string): void {
   console.log(typeof id + ', ' + typeof name);
 }
 
-dísplayType<number>(2, 'Malik'); // number, string
+displayType<number>(2, 'Malik'); // number, string
