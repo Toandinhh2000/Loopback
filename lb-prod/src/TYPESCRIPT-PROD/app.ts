@@ -1,16 +1,43 @@
-interface ElementChecker {
-  <T>(item: T[],tobeChecked: T, atIndex: number): boolean;
+class GenericNumber<T> {
+  zeroValue: T;
+  add: (x: T, y: T) => T;
 }
 
-function checkElementAt<T>(
-  item: T[],
-  tobeChecked: T,
-  atIndex: number
-): boolean {
-  if (item[atIndex] === tobeChecked) {
+let myGenericNumber = new GenericNumber<number>();
+myGenericNumber.zeroValue = 0;
+myGenericNumber.add = function(x, y) {
+  return x + y;
+};
+
+interface Collection<T> {
+  add(t: T): void;
+  remove(t: T): void;
+  asArray(): T[];
+}
+
+class List<T> implements Collection<T> {
+  private items: T[] = [];
+
+  add(t: T): void {
+    this.items.push(t);
   }
 
-  let checker: ElementChecker = checkElementAt;
-  let items = [1, 3, 5, 7];
-  let b;Boolean = checker<number>(items, 5, 1);
-  console.log(b); 
+  remove(t: T): void {
+    const index = this.items.indexOf(t);
+    if (index > -1) {
+      this.items.splice(index, 1);
+    }
+  }
+
+  asArray(): T[] {
+    return this.data;
+  }
+}
+
+let numbers: Collection<number> = new List();
+numbers.add(11);
+numbers.add(12); 
+numbers.add(13);
+numbers.remove(12);
+let numArray = numbers.asArray();
+console.log(numArray);
