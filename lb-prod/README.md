@@ -15,3 +15,5 @@
 # LESSON 7 - Generic Constraints
 
 # LESSON 8 - Generic Interfaces to describe Object Properties
+
+# LESSON 9 - Create Interface to describe Function Type
